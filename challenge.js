@@ -1119,7 +1119,7 @@ const interactiveChallenges = {
     birthdayExif: {
         content: `
             <h2 style="color: var(--primary); margin-bottom: 1rem;">🔍 Hidden Birthday Message</h2>
-            <img src="asset/1_Hbd_20th.png" class="challenge-header-img" alt="Birthday Exif">
+            <img src="1_Hbd_20th.png" class="challenge-header-img" alt="Birthday Exif">
             <div class="analysis-results">
                 <h4>🎯 Mission Briefing</h4>
                 <p>คุณได้รับไฟล์รูปภาพที่มีข้อมูล EXIF metadata ซ่อนอยู่ ต้องวิเคราะห์ metadata เพื่อหา flag</p>
@@ -1204,7 +1204,7 @@ const interactiveChallenges = {
     geoLocation: {
         content: `
             <h2 style="color: var(--primary); margin-bottom: 1rem;">🔍 Geolocation Mystery</h2>
-            <img src="asset/2_Where_is_it.jpg" class="challenge-header-img" alt="Geolocation">
+            <img src="2_Where_is_it.jpg" class="challenge-header-img" alt="Geolocation">
             <div class="analysis-results">
                 <h4>🎯 Mission Briefing</h4>
                 <p>ไฟล์รูปภาพมี GPS coordinates ซ่อนอยู่ ต้องหาพิกัดและระบุตำแหน่งเพื่อหา flag</p>
@@ -1285,7 +1285,7 @@ const interactiveChallenges = {
     stegoFlag: {
         content: `
             <h2 style="color: var(--primary); margin-bottom: 1rem;">🔍 Steganography Battlefield</h2>
-            <img src="asset/3_flag_img.png" class="challenge-header-img" alt="Steganography">
+            <img src="3_flag_img.png" class="challenge-header-img" alt="Steganography">
             <div class="analysis-results">
                 <h4>🎯 Mission Briefing</h4>
                 <p>ไฟล์รูปภาพมีข้อมูลซ่อนอยู่ภายในโดยใช้ steganography technique ต้องใช้เครื่องมือวิเคราะห์หาข้อมูลที่ซ่อนไว้</p>
@@ -5194,6 +5194,7 @@ window.confirmBackToCategory = function() {
 window.checkFlag = checkFlagSecure;
 
 // Replace the insecure checkFlag function
+
 
 
 

@@ -1119,7 +1119,7 @@ const interactiveChallenges = {
     birthdayExif: {
         content: `
             <h2 style="color: var(--primary); margin-bottom: 1rem;">🔍 Hidden Birthday Message</h2>
-            <img src="1_Hbd_20th.png" class="challenge-header-img" alt="Birthday Exif">
+            <img src="asset/1_Hbd_20th.png" class="challenge-header-img" alt="Birthday Exif">
             <div class="analysis-results">
                 <h4>🎯 Mission Briefing</h4>
                 <p>คุณได้รับไฟล์รูปภาพที่มีข้อมูล EXIF metadata ซ่อนอยู่ ต้องวิเคราะห์ metadata เพื่อหา flag</p>
@@ -1204,7 +1204,7 @@ const interactiveChallenges = {
     geoLocation: {
         content: `
             <h2 style="color: var(--primary); margin-bottom: 1rem;">🔍 Geolocation Mystery</h2>
-            <img src="2_Where_is_it.jpg" class="challenge-header-img" alt="Geolocation">
+            <img src="asset/2_Where_is_it.jpg" class="challenge-header-img" alt="Geolocation">
             <div class="analysis-results">
                 <h4>🎯 Mission Briefing</h4>
                 <p>ไฟล์รูปภาพมี GPS coordinates ซ่อนอยู่ ต้องหาพิกัดและระบุตำแหน่งเพื่อหา flag</p>
@@ -1285,7 +1285,7 @@ const interactiveChallenges = {
     stegoFlag: {
         content: `
             <h2 style="color: var(--primary); margin-bottom: 1rem;">🔍 Steganography Battlefield</h2>
-            <img src="3_flag_img.png" class="challenge-header-img" alt="Steganography">
+            <img src="asset/3_flag_img.png" class="challenge-header-img" alt="Steganography">
             <div class="analysis-results">
                 <h4>🎯 Mission Briefing</h4>
                 <p>ไฟล์รูปภาพมีข้อมูลซ่อนอยู่ภายในโดยใช้ steganography technique ต้องใช้เครื่องมือวิเคราะห์หาข้อมูลที่ซ่อนไว้</p>
@@ -1734,7 +1734,7 @@ const interactiveChallenges = {
     <span style="color: #8b949e;">$ </span></div>
                 <div style="display: flex; padding: 0.8rem 1rem; gap: 0.5rem; background: #161b22; border-top: 1px solid #30363d;">
                     <span style="color: #7ee787; font-family: monospace;">$</span>
-                    <input type="text" id="crackmeCommand" placeholder="./crackme_easy SERIAL123" 
+                    <input type="text" id="crackmeCommand" placeholder="./" 
                         style="flex: 1; background: transparent; border: none; color: #c9d1d9; font-family: 'Courier New', monospace; font-size: 0.9rem; outline: none;"
                         autocomplete="off" spellcheck="false"
                         onkeydown="handleTerminalKeydown(event, 'crackmeTerminal', executeCrackmeCommand)">
@@ -3948,12 +3948,10 @@ c2VjWHBsb3Jl + e2RuczFfdHVu + bjNsXzN4ZjFs + dHI0dDEwbn0=
     else if (cmd.includes('base64') && cmd.includes('-d')) {
         if (cmd.includes('c2VjWHBsb3Jle2RuczFfdHVubjNsXzN4ZjFsdHI0dDEwbn0=')) {
             terminal.innerHTML += `<span style="color: #7ee787;">secXplore{dns1_tunn3l_3xf1ltr4t10n}</span>\n`;
-        } else if (cmd.includes('c2VjWHBsb3Jl')) {
-            terminal.innerHTML += `<span style="color: #8b949e;">secXplore</span>
-<span style="color: #7ee787;">💡 This is just part of the data. Combine all subdomains!</span>
-`;
+        } else if (command.includes('c2VjWHBsb3Jl')) {
+            terminal.innerHTML += `<div style="color: #8b949e;">secXplore{dns1_tunn3l_3xf1ltr4t10n}</div>`;
         } else {
-            terminal.innerHTML += `<span style="color: #8b949e;">Usage: echo "base64_string" | base64 -d</span>\n`;
+            terminal.innerHTML += `<div style="color: #8b949e;">Usage: echo "base64" | base64 -d</div>`;
         }
     }
     // STRINGS
@@ -5194,7 +5192,6 @@ window.confirmBackToCategory = function() {
 window.checkFlag = checkFlagSecure;
 
 // Replace the insecure checkFlag function
-
 
 
 
